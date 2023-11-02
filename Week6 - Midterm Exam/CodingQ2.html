@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+   <html>
+      <head>
+         <meta charset="utf-8">
+         <title>Midterm Javascript Challenge</title>
+      </head>
+      <body>
+         <div id="container">
+            <p id="paragraphId1">Midterm submission for </p>
+            <p id="paragraphId2"></p>
+            <button id="btnGetMesssage">Get Message</button>
+         </div>
+      <script src="js/midtermEvent.js"></script>
+      </body>
+      <script>
+        const element = document.getElementById("btnGetMesssage");
+         element.addEventListener("mouseover", function(){
+    document.getElementById("paragraphId2").innerHTML =  "Midterm submission for Kristina Finley";
+   });
+      </script>
+</html>

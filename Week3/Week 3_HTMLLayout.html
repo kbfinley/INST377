@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>INST377 - Class Page</title>
+        <style>
+            body{
+                background-color: #EEE5E9;
+            }
+            #bar{
+                text-align: center;
+                background-color: #7c7c7c;
+                color: white;
+                margin: 5px 0px 5px 0px;
+            }
+            #main-nav{
+                background-color: #D64933;
+            }
+            #main-nav li {
+                display:inline;
+                position:relative;
+            }
+            #main-nav ul ul {
+                display: none;
+                position: absolute;
+            }
+            #main-nav ul li{
+                list-style-type: none;
+                display: inline-block;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 30%;
+            }
+            #main-nav li:hover{
+                background-color: #7c7c7c;
+                color: white;
+            }
+            #main-nav li:hover ul{
+                display: block;
+                background-color: #D64933;
+                padding: 0;
+                width: 100%;
+                text-align: center; 
+            }
+            .main-container{
+                background-color: #92DCE5;
+                width: 100%;
+                height: 100%;
+            }
+            .content-box{
+                background-color: #EEE5E9;
+                padding: 10px;
+                margin: 10px;
+            }
+            .announcement-box{
+                background-color: #92DCE5;
+                width: 70%;
+                float: left;
+            }
+            #sidebar{
+                background-color: rgb(13,165,13);
+                text-align: center;
+                margin: 10px;
+                padding: 10px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Title Bar -->
+        <header id="bar">
+            <h1>INST377 Class Page</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav id="main-nav">
+            <ul>
+                <li>Announcements</li>
+                <li>Assignments
+                    <ul>
+                        <li>Assignment 1</li>
+                        <br>
+                        <li>Assignment 2</li>
+                        <br>
+                        <li>Assignment 3</li>
+                        <br>
+                    </ul>
+                </li>
+                <li>Contact Info</li>
+            </ul>
+        </nav>
+
+        <!-- Main Text Area -->
+        <div class="main-container">
+            <h1>Announcements</h1>
+            <div class="announcement-box">
+                <div class="content-box">
+                    <h1>This is content box 1</h1>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="content-box">
+                    <h1>This is content box 2</h1>
+                    <p>Lorem Ipsum</p>
+                </div>
+                <div class="content-box">
+                    <h1>This is content box 3</h1>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <aside id="sidebar">
+                <h1>Contact Info</h1>
+                <hr>
+                <h3>Name: Kristina Finley</h3>
+                <h3>Email: kfinley@umd.edu</h3>
+            </aside>
+        </div>
+        <footer id="bar">
+            <p1>Copyright of someone, somewhere</p1>
+        </footer>
+    </body>
+</html>

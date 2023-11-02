@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>JS Fun Day</title>
+        <script type="text/javascript">
+            function changeElement(){
+                if(document.getElementById("word").style.color == "blue"){
+                    document.getElementById("word").style.color = "black"
+                }else{
+                    document.getElementById("word").style.color = "blue"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="word">This text will change COLOURs</h1>
+        <button onclick="changeElement()">Change Color!</button>
+    </body>
+</html>

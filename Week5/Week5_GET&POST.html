@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>INST377 - Week 5</title>
+    </head>
+    <body>
+        <h1>This is a GET form</h1>
+        <form method="GET" action="https://inst377-lab4-server.vercel.app/api/product">
+          <label for="name">Name:</label>  
+          <input type="text" name="name" id="name">
+          <br><br>
+          <input type="submit" value="Submit GET">
+        </form>
+        <br><hr>
+        <h1>This is a POST form</h1>
+        <form method="POST" action="https://inst377-lab4-server.vercel.app/api/product/add">
+          <label for="name">Name:</label>  
+          <input type="text" name="name" id="name">
+          <br><br>
+          <input type="submit" value="Submit POST">
+        </form>
+        
+
+    </body>
+</html>
+<!-- 
+    GET response: {"status":200,"message":"Get data has successfully, Query Params(If Any){\"name\":\"Kristina\"}"}
+    POST response: {"name":"Kristina"}
+-->

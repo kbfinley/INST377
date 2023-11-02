@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>INST377 - HTML Form Example</title>
+        <style>
+            input{
+                background-color: rgb(248, 215, 143);
+            }
+            label {
+                font-family: "Lucida Console", "Courier New", monospace;
+            }
+            .color-box{
+                background-color: lightgray;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Contact Me!</h1>
+        <form name="htmlExampleForm" method="post" action="/Users/kristinafinley/Visual Studio Code/INST377 🟦/Week2_FormSuccess.html">
+            <!-- Name Fields -->
+        <div class="color-box">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" placeholder="John" required>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" placeholder="Doe" required>
+            <br><hr>
+
+            <!-- Date -->
+            <label for="inquiryDate">Inquiry Date</label>
+            <input type="date" id="inquiryDate">
+            <br><hr>
+        </div>
+
+            <!-- Inquiry Type -->
+            <label for="inquirytype">Inquiry Type</label><br>
+            <input type="radio" id="inquirytype">Media <br>
+            <input type="radio" id="inquirytype">Cuz I'm Bored
+            <br><hr>
+
+            <!-- Address -->
+            <label for="address">Address</label><br>
+            <input type="text" id="street" placeholder="Street">
+            <input type="text" id="city" placeholder="City">
+            <input type="text" id="state" placeholder="State"><br>
+            <input type="number" id="zipcode" placeholder="Zip Code">
+            <br><hr>
+            
+            <!-- Drop Down -->
+            <label for="affiliation">What university are you affiliated with?</label>
+            <select>
+                <option value="umd">UMD</option>
+                <option value="umbc">UMBC</option>
+                <option value="other">Other</option>
+            </select>
+            <br><hr>
+
+            <!-- Email Address -->
+            <label for="email">What is the best email to reach you?</label><br>
+            <input type="email" id="email" placeholder="test@email.com" required>
+            <br><hr>
+
+            <!-- Submit Button -->
+            <br><br>
+            <input type="submit" value="Send It!">
+        </form>
+    </body>
+</html>
