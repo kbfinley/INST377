@@ -1,0 +1,15 @@
+{
+  "name": "nodesample",
+  "version": "1.0.0",
+  "description": "This is Sample Node App",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: BLAH\" && exit 1",
+    "start": "nodemon -e '*'"
+  },
+  "author": "Kristina Finley",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
