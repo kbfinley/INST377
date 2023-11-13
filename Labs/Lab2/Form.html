@@ -5,27 +5,25 @@
             body{
                 background-color: blanchedalmond;
             }
-            .submit-box {
-                background-color: green; 
-                color: black; 
-                border: 2px solid #4CAF50;
+            .submitbutton{
+                background-color: black;
+                color: whitesmoke; 
                 text-align: center;
-                margin-top: 100px;
-                margin-bottom: 100px;
-                margin-right: 150px;
                 margin-left: 80px;
-              }
-              
-            .submit-box:hover {
-                background-color: #4CAF50;
-                color: white;
                 padding: 1%;
-                font-size: large;
-              }
+            }
+            .submitbutton:hover{
+                background-color: green;
+                color: white;
+                text-align: center;
+                margin-left: 80px;
+                padding: 2%;
+                font-size: larger;
+            }
         </style>
         <body>
             <h1>INST377 - Lab 2 - Contact Me</h1>
-            <form name= "lab2form" method="post" action="/Users/kristinafinley/Visual Studio Code/INST377 🟦/Kristina_Finley_Lab2_ThankYou.html"> 
+            <form name= "lab2form" method="post" action="/Users/kristinafinley/Visual Studio Code/INST377/Labs/Lab2/ThankYou.html"> 
             <!-- Name Field -->
             <label for="Name">Name:</label>
             <input type="text" id="Name" placeholder="Enter Full Name" required><br>
@@ -36,9 +34,7 @@
             
             <!-- Submit Button -->
             <br><br>
-            <div class="submit-box">
-            <input type="submit" value="Submit">
-        </div>
+            <input type="submit" value="Submit" class="submitbutton">
         </body>
         
     </head>

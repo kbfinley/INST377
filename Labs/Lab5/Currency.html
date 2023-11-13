@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>INST377 - Lab 5</title>
+    <script defer type="text/javascript" src="Currency.js"></script>
+    <style>
+      body {
+        background-color: antiquewhite;
+        font-family: "Times New Roman", Times, serif;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Let's Convert some Currency!</h1>
+    <form id="CurrencyForm" onsubmit="conversion(); return false;">
+      <label for="from" id="fromCurrency">From Currency:</label>
+      <select id="from"></select>
+      <br />
+
+      <label for="to" id="toCurrency">To Currency:</label>
+      <select id="to"></select>
+      <br />
+
+      <label for="number">Number to Convert:</label>
+      <input type="number" id="numberToConvert" />
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+    <h2 id="result"></h2>
+  </body>
+</html>

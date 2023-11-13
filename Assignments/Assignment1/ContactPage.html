@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Contact Page</title>
+    <script type="text/javascript">
+      function validate() {
+        var specialChar = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+        if (specialChar.test(document.getElementById("concern").value)) {
+          alert("You have put an invalid character in input");
+          return false;
+        }
+        return true;
+      }
+    </script>
+    <style>
+      body {
+        background-color: thistle;
+      }
+      #header {
+        background-color: #7c7c7c;
+        text-align: center;
+        color: white;
+      }
+      #main-nav {
+        background-color: #d64933;
+      }
+      #linkedin-logo {
+        float: right;
+        position: relative;
+        top: -5px;
+      }
+      #main-nav li {
+        display: inline;
+        position: relative;
+      }
+      #main-nav ul ul {
+        display: none;
+        position: absolute;
+      }
+      #main-nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 30%;
+      }
+      #main-nav li:hover {
+        background-color: #7c7c7c;
+        color: white;
+      }
+      #main-nav li:hover ul {
+        display: block;
+        background-color: #d64933;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .main-container {
+        width: 100%;
+        height: 100%;
+      }
+      .content-box {
+        background-color: #eee5e9;
+        padding: 10px;
+        margin: 10px;
+      }
+      .announcement-box {
+        background-color: #92dce5;
+        width: 70%;
+        float: left;
+      }
+      #sidebar {
+        background-color: rgb(13, 165, 13);
+        text-align: center;
+        float: right;
+        width: 25%;
+      }
+      #footer {
+        text-align: center;
+        background-color: #7c7c7c;
+        color: white;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Title Bar -->
+    <header id="header">
+      <h1>Contact Me</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+      <ul>
+        <a href="HomePage.html">
+          <li>Home</li>
+        </a>
+        <a href="GamesPage.html">
+          <li>Games</li>
+        </a>
+        <a href="ContactPage.html">
+          <li>Contact Me</li>
+        </a>
+      </ul>
+    </nav>
+    <!-- Main Text Area -->
+    <h1>Have Questions? Feel free to reach out!</h1>
+    <form
+      name="contactForm"
+      onsubmit="return(validate())"
+      action="SuccessFormPage.html"
+    >
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <br />
+      <label for="date">Date:</label>
+      <input type="date" id="date" />
+      <br />
+      <label for="concern">Concern:</label>
+      <textarea
+        rows="4"
+        cols="50"
+        name="concern"
+        id="concern"
+        required
+      ></textarea>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <footer id="footer">
+      <p>Copyright of someone, somewhere</p>
+    </footer>
+  </body>
+</html>

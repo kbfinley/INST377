@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<title>Assignment 2 - Dogs Page</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+<script src="Dogs.js" defer></script>
+<style>
+  /*Top Hand Navigation*/
+  body {
+    background-color: bisque;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  #header {
+    background-color: black;
+    text-align: center;
+    color: white;
+  }
+
+  #main-nav {
+    background-color: #004791;
+  }
+
+  #main-nav li {
+    display: inline;
+    position: relative;
+    float: both;
+    top: 100%;
+  }
+
+  #main-nav ul ul {
+    display: none;
+    position: absolute;
+  }
+
+  #main-nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 32%;
+    position: relative;
+  }
+
+  #main-nav li:hover {
+    background-color: #FFD61A;
+    color: black;
+    text-align: center;
+    padding: none;
+  }
+
+  #main-nav li:hover ul {
+    display: block;
+    background-color: black;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav {
+    color: white;
+  }
+
+  #stockSymbol {
+    width: 200px;
+  }
+
+  /*Slide Show attributes */
+  #simpleSlider {
+    margin: auto;
+    border-style: double;
+    border-color: black 5px;
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* Button for Different Dogs Breeds */
+  .button-74 {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button-74:hover {
+    background-color: #fff;
+  }
+
+  .button-74:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
+
+  @media (min-width: 768px) {
+    .button-74 {
+      min-width: 120px;
+      padding: 0 25px;
+    }
+  }
+  /*Dog Information*/
+  #dogInfo{
+    background-color: #fbeee0;
+    border: 7px solid #422800;
+    color: black;
+    width: fit-content;
+    height: 260px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 1%;
+    font-size: larger;
+    font-weight: bolder;
+    
+  }
+
+  /*Audio Box on Home page*/
+  #audio-box {
+    background-color: #004791;
+    color: white;
+    width: 70%;
+    height: 25%;
+    border: 5px solid black;
+    padding: 50px;
+    margin: auto;
+    margin-top: 30px;
+
+  }
+
+  #turnOnButton {
+    background-color: rgb(38, 202, 38);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    display: inline-block;
+  }
+
+  #turnOffButton {
+    background-color: rgb(225, 66, 66);
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    display: inline-block;
+  }
+</style>
+</head>
+
+<body>
+  <!-- Header Title Bar -->
+  <header id="header">
+    <h1>INST377 - Dogs</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav id="main-nav">
+    <ul>
+      <a href="Home.html">
+        <li id="nav">HOME</li>
+      </a>
+      <a href="Stocks.html">
+        <li id="nav">STOCKS</li>
+      </a>
+      <a href="Dogs.html">
+        <li id="nav">DOGS</li>
+      </a>
+    </ul>
+  </nav>
+  <hr>
+
+  <h2>Doggos! &#128054;</h2>
+
+  <div data-simple-slider id="simpleSlider">
+  </div>
+  <hr>
+
+  <div id="button-box"></div>
+
+  <div id="dogInfo"></div>
+
+  <hr>
+
+  <div id="audio-box">
+    <h1>In this web page there are options to Navigate using Audio!</h1>
+    <h2>Ensure your Mic is enabled to be able to use this feature</h2>
+    <ul>
+      <li>Load Dog Breed</li>
+      <ul>
+        <li>Say: <strong>Load Dog Breed &lt;dog breed name&gt;</strong></li>
+      </ul>
+      <li>Navigate to a Different Page</li>
+      <ul>
+        <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+      </ul>
+      <li>Change the Page Color</li>
+      <ul>
+        <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+      </ul>
+      <li>Say Hello Back to you!</li>
+      <ul>
+        <li>Say: <strong>Hello</strong></li>
+      </ul>
+    </ul>
+    <div class="buttons">
+      <button id="turnOnButton" type="button" onclick="startRecognition()"><strong>Turn On Listening</strong></button>
+      <button id="turnOffButton" type="button" onclick="finishRecognition()"><strong>Turn Off Listening</strong></button>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>INST377 - Lab 3</title>
+        <script type="text/javascript"> 
+            function submitChoice(){
+                alert("You ("+ document.getElementById("name").value + ") chose:" + document.getElementById("yourChoice").value);
+                if(document.getElementById("body").style.backgroundColor == "bisque"){
+                }else{
+                    document.getElementById("body").style.backgroundColor = "lightgreen"
+                }
+            }
+        </script>
+        <style>
+            body{
+                background-color: bisque;
+            }
+            .game-box{
+                float: left;
+                width: 65%; 
+            }
+            .content-box{
+                background-color: hotpink;
+                border-style: solid;
+                border-width: 2px;
+            }
+            #sidebar{
+                background-color: darksalmon;
+                border-style: solid;
+                border-width: 2px;
+                float: right;
+                width: 30%;
+            }
+            #footer{ 
+                text-align: center;
+                background-color: black;
+                color: white;
+                margin: 5px 0px 5px 0px;
+                text-align: center;
+                position: fixed;
+                bottom: 175px;
+                width: 110%;
+            } 
+        </style>
+    </head>
+    <body id= "body">
+        <!-- Header Title Bar -->
+        <header id="header">
+            <h1>Lab 3 - Rock Paper Scissors</h1>
+        </header>
+
+        <!-- Main Text Area: to display what the user selected -->
+        <div class="main-container">
+            <div class="game-box">
+                <div class="content-box">
+                    <h2>Please choose one of the following.</h2>
+                    <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" required>
+                    <br><br>
+                    <label for="choice">Your Choice</label>
+                    <select id="yourChoice">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                    <br><br>
+                    <button onclick="submitChoice()">Submit</button>
+                </div>
+            </div>
+
+        <!-- Side Bar: rules of the game -->
+            <aside id="sidebar">
+                <h1><u>Rules</u></h1>
+                <h3>You must choose Rock, Paper, or Scissors</h3>
+                <h3>The Combos are as follows: </h3>
+                <ul>
+                    <li>Rock beats Scissors</li>
+                    <li>Scissors beats Paper</li>
+                    <li>Paper beats Rock</li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p1>This is a footer, maybe I should make it interesting, but I am pretty boring.</p1>
+        </footer>
+    </body>
+</html>

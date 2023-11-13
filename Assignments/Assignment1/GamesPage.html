@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <title>Games Page</title>
+        <script type="text/javascript">
+            function playGame(){
+                const userChoice = document.getElementById('user-select').value 
+                document.getElementById('you-chose').innerText = "You Chose: " + userChoice;
+
+                const computerChoices = ["Rock", "Paper", "Scissors", "SPOCK"];
+                const computerChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+                document.getElementById('computer-chose').innerText = "Computer Chose: " + computerChoice;
+
+                if(userChoice == computerChoice){
+                    alert("You Tied")
+                    document.body.style.backgroundColor = "blue"
+                }else if(userChoice == "Rock" && computerChoice == "Scissors"){
+                        document.body.style.backgroundColor = "green"
+                        alert("YOU WIN!") 
+                }else if(userChoice == "Scissors" && computerChoice == "Rock" ){
+                        alert("You Lose:(") 
+                        document.body.style.backgroundColor = "red"
+                }else if(userChoice == "Paper" && computerChoice == "Scissors"){
+                        alert("You Lose :(") 
+                        document.body.style.backgroundColor = "red"
+                }else if(userChoice == "Scissors" && computerChoice == "Paper"){
+                        alert("YOU WIN!") 
+                        document.body.style.backgroundColor = "green"
+                }else if(userChoice == "Paper" && computerChoice == "Rock"){
+                        alert("YOU WIN!") 
+                        document.body.style.backgroundColor = "green"
+                }else if(userChoice == "Rock" && computerChoice == "Paper"){
+                        alert("You Lose :(") 
+                        document.body.style.backgroundColor = "red"
+                }else{
+                    alert("You Lose :(")
+                    document.body.style.backgroundColor = "red"
+                }
+                return false;
+            }
+        </script>
+        <style>
+            body{
+                background-color:thistle;
+            }
+            #header{
+                background-color: #7c7c7c;
+                text-align: center;
+                color: white;
+            }
+            #main-nav{
+                background-color: #D64933;
+            }
+            #main-nav li {
+                display:inline;
+                position:relative;
+            }
+            #main-nav ul ul {
+                display: none;
+                position: absolute;
+            }
+            #main-nav ul li{
+                list-style-type: none;
+                display: inline-block;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 30%;
+            }
+            #main-nav li:hover{
+                background-color: #7c7c7c;
+                color: white;
+            }
+            #main-nav li:hover ul{
+                display: block;
+                background-color: #D64933;
+                padding: 0;
+                width: 100%;
+                text-align: center; 
+            }
+            .box-container{
+                padding: 20px;
+            }
+            .box-left{
+                background-color: #EEE5E9;
+                width: 45%;
+                margin: 10px;
+                border-color:darkgreen;
+                border-style: solid;
+                border-width: 7px;
+                float: left;
+            }
+            .box-right{
+                background-color: #EEE5E9;
+                width: 45%;
+                margin: 10px;
+                border-color:darkred;
+                border-style: solid;
+                border-width: 7px;
+                float: right;
+            }
+            #you-chose{
+                text-align: center;
+            }
+            #computer-chose{
+                text-align: center;
+            }
+            #footer{
+                text-align: center;
+                background-color: #7c7c7c;
+                color: white;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Title Bar -->
+        <header id="header">
+            <h1>Games</h1>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav id="main-nav">
+            <ul>
+                <a href="HomePage.html">
+                <li>Home</li>
+                </a>
+                <a href="GamesPage.html">
+                <li>Games</li>
+                </a>
+                <a href="ContactPage.html">
+                <li>Contact Me</li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- Rock, Paper, Scissors -->
+        <h1>Rock, Paper, Scissors</h1>
+        <hr>
+        <form onsubmit="return playGame()">
+        <select id="user-select">
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+        </select>
+        <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <div class="box-container">
+        <div class="box-left">
+            <h1 id="you-chose">You Chose:</h1>
+        </div>
+        <div class="box-right">
+            <h1 id="computer-chose">Computer Chose:</h1>
+        </div>
+    </div>
+        <footer id="footer">
+            <p>Copyright of someone, somewhere</p>
+        </footer>
+    </body>
+</html>

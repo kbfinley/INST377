@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <title>Assignment 2 - Home Page</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"
+      defer
+    ></script>
+    <script src="Home.js" defer></script>
+    <style>
+      /*Top Hand Navigation*/
+      body {
+        background-color: bisque;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #header {
+        background-color: black;
+        text-align: center;
+        color: white;
+      }
+
+      #main-nav {
+        background-color: #004791;
+      }
+
+      #main-nav li {
+        display: inline;
+        position: relative;
+        float: both;
+        top: 100%;
+      }
+
+      #main-nav ul ul {
+        display: none;
+        position: absolute;
+      }
+
+      #main-nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 32%;
+        position: relative;
+      }
+
+      #main-nav li:hover {
+        background-color: #ffd61a;
+        color: black;
+        text-align: center;
+        padding: none;
+      }
+
+      #main-nav li:hover ul {
+        display: block;
+        background-color: black;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      #nav {
+        color: white;
+      }
+
+      /* Button 1 */
+      .button1 {
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+        padding: 15px 25px;
+        background-color: #422800;
+        background-image: radial-gradient(
+            93% 87% at 87% 89%,
+            rgba(0, 0, 0, 0.23) 0%,
+            transparent 86.18%
+          ),
+          radial-gradient(
+            66% 66% at 26% 20%,
+            rgba(255, 255, 255, 0.55) 0%,
+            rgba(255, 255, 255, 0) 69.79%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
+          inset 0px 3px 9px rgba(255, 255, 255, 0.3),
+          inset 0px 1px 1px rgba(255, 255, 255, 0.6),
+          inset 0px -8px 36px rgba(0, 0, 0, 0.3),
+          inset 0px 1px 5px rgba(255, 255, 255, 0.6),
+          2px 19px 31px rgba(0, 0, 0, 0.2);
+        border-radius: 14px;
+        font-weight: bold;
+        font-size: 30px;
+        width: 300px;
+        display: block;
+
+        border: 0;
+
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+
+        cursor: pointer;
+      }
+
+      /* Button 2 */
+      .button2 {
+        color: #fff;
+        font-family: "Times New Roman", Times, serif;
+        padding: 15px 25px;
+        background-color: #422800;
+        background-image: radial-gradient(
+            93% 87% at 87% 89%,
+            rgba(0, 0, 0, 0.23) 0%,
+            transparent 86.18%
+          ),
+          radial-gradient(
+            66% 66% at 26% 20%,
+            rgba(255, 255, 255, 0.55) 0%,
+            rgba(255, 255, 255, 0) 69.79%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25),
+          inset 0px 3px 9px rgba(255, 255, 255, 0.3),
+          inset 0px 1px 1px rgba(255, 255, 255, 0.6),
+          inset 0px -8px 36px rgba(0, 0, 0, 0.3),
+          inset 0px 1px 5px rgba(255, 255, 255, 0.6),
+          2px 19px 31px rgba(0, 0, 0, 0.2);
+        border-radius: 14px;
+        font-weight: bold;
+        font-size: 30px;
+        width: 300px;
+        display: block;
+
+        border: 0;
+
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+
+        cursor: pointer;
+      }
+      /*Both Buttons to center them*/
+      #buttons {
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        margin-left: 20px;
+        gap: 5px;
+      }
+
+      /*Quote box on Home Page*/
+      #quote-box {
+        background-color: #fbeee0;
+        border: 5px solid #422800;
+        color: black;
+        padding: 50px;
+        margin: auto;
+        margin-top: 30px;
+        width: 70%;
+        height: 15%;
+        padding: 50px;
+        align-items: center;
+        font-size: larger;
+      }
+
+      #pageLoadQuote {
+        text-align: center;
+      }
+
+      #quote {
+        text-align: center;
+      }
+
+      /*Audio Box on Home page*/
+      #audio-box {
+        background-color: #004791;
+        color: white;
+        width: 70%;
+        height: 35%;
+        border: 5px solid black;
+        padding: 50px;
+        margin: auto;
+        margin-top: 30px;
+      }
+
+      #turnOnButton {
+        background-color: rgb(38, 202, 38);
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      #turnOffButton {
+        background-color: rgb(225, 66, 66);
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        margin-right: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header Title Bar -->
+    <header id="header">
+      <h1>INST377 - Activities</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav id="main-nav">
+      <ul>
+        <a href="Home.html">
+          <li id="nav">HOME</li>
+        </a>
+        <a href="Stocks.html">
+          <li id="nav">STOCKS</li>
+        </a>
+        <a href="Dogs.html">
+          <li id="nav">DOGS</li>
+        </a>
+      </ul>
+    </nav>
+    <hr />
+    <h2>These are some different activities we can try!</h2>
+    <div id="buttons">
+      <a href="Stocks.html" style="text-decoration: none">
+        <button class="button1" role="button">STOCKS</button>
+      </a>
+      <a href="Dogs.html" style="text-decoration: none">
+        <button class="button2" role="button">DOGS</button>
+      </a>
+    </div>
+
+    <div id="quote-box">
+      <h1 id="pageLoadQuote">Quote of the Page Load</h1>
+      <div id="quote"></div>
+    </div>
+
+    <div id="audio-box">
+      <h1>In this web page there are options to Navigate using Audio!</h1>
+      <h2>Ensure your Mic is enabled to be able to use this feature</h2>
+      <ul>
+        <li>Navigate to a Different Page</li>
+        <ul>
+          <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+        </ul>
+        <li>Change the Page Color</li>
+        <ul>
+          <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+        </ul>
+        <li>Say Hello Back to you!</li>
+        <ul>
+          <li>Say: <strong>Hello</strong></li>
+        </ul>
+      </ul>
+
+      <div class="buttons">
+        <button id="turnOnButton" type="button" onclick="startRecognition()">
+          <strong>Turn On Listening</strong>
+        </button>
+        <button id="turnOffButton" type="button" onclick="finishRecognition()">
+          <strong>Turn Off Listening</strong>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

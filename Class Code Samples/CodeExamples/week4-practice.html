@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script>
+      // Useful resource for checking Regex: https://regex101.com/
+
+      /*
+        validate() is used to determine whether there is a valid string in
+        the textarea.
+
+        Rules:
+        - textarea must not contain any vowels.
+        - If it does, an alert should appear.
+        - If it does not, the background color of the page should change to "lightblue".
+        */
+      function validate() {
+        const pattern = /[AaEeIiOoUu]/;
+        const textarea = document.getElementById("my-text-area");
+
+        // test to see if there's a vowel
+        if (pattern.test(textarea.value) == true) {
+          alert("There's a vowel!");
+        } else {
+          document.body.style.backgroundColor = "lightblue";
+        }
+
+        return false; // prevents refreshing the page.
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Super Important Form</h1>
+    <form onsubmit="return validate()">
+      <label for="text-area"></label>
+      <textarea
+        name="text-area"
+        id="my-text-area"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>
