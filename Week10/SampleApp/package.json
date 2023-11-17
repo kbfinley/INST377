@@ -1,0 +1,18 @@
+{
+  "name": "sampleapp",
+  "version": "1.0.0",
+  "description": "Week 10 Sample App",
+  "main": "index.js",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.38.4",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.0-alpha.6"
+  },
+  "scripts": {
+    "start": "nodemon -e '*'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kristina Finley",
+  "license": "ISC"
+}
