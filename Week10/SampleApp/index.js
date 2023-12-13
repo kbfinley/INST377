@@ -6,9 +6,9 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(express.static(__dirname + "/public"));
 
-const supabaseUrl = "https://bxquwemdpdwczvachras.supabase.co";
+const supabaseUrl = "https://hdzwectanbumouvbmbrx.supabase.co";
 const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4cXV3ZW1kcGR3Y3p2YWNocmFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk5MDQ4NDksImV4cCI6MjAxNTQ4MDg0OX0.mBxsXBloI9M7Y31vltPTrCmNPxKW2YrUzfZE4zChhgw";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhkendlY3RhbmJ1bW91dmJtYnJ4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDE0NDgwNTAsImV4cCI6MjAxNzAyNDA1MH0.hwYK8y3prCi0naKr2N0jF4c3RME1Uj_fRVzCmxyghTY";
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
 
 app.get("/", (req, res) => {

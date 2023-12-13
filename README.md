@@ -1,3 +1,3 @@
-This class is called DYNAMIC WEB APPLICATIONS. I am taking this course Fall of 2023 (Junior Year). 
-This is going to teach us how to be a Full Stack Software Engineer. 
-We are learning JavaScript, HTML, CSS, Node.JS, JSON, APIs, REST/Express, and Yarn/Npm . 
+# INST377 - Dynamic Web Applications 
+# Fall 2023
+An exploration of the basic methods and tools for developing dynamic, database-driven websites, including acquiring, installing, and running web servers, database servers, and connectability applications. We learned JavaScript, HTML, CSS, NodeJS, JSON, APIs, REST/Express, and Yarn/NPM. 
